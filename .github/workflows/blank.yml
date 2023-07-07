@@ -26,5 +26,5 @@ jobs:
       - name: Sync up to CodeCommit
         uses: vebss123/ATM
         with:
-          repository_name:GithubRepo
+          repository_name: GithubRepo
           aws_region: us-east-1
