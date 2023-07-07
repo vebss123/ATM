@@ -12,19 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           fetch-depth: 0
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1.0.3
+        uses: aws-actions/configure-aws-credentials@master
         with:
           aws-access-key-id: ${{ secrets.access_key_id}}
           aws-secret-access-key: ${{ secrets.secret_access_key }}
           aws-region: us-east-1
 
       - name: Sync up to CodeCommit
-        uses: vebss123/ATM@v1
+        uses: vebss123/ATM@master
         with:
           repository_name: GithubRepo
           aws_region: us-east-1
